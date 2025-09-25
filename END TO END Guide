@@ -1,0 +1,117 @@
+# AI Engineer Interview Guide (2 Years Experience)
+
+A curated collection of technical questions, study materials, and preparation strategies for AI Engineers and Data Scientists targeting product-based companies. This guide is specifically tailored for professionals with **~2 years of experience**, focusing on the blend of deep technical knowledge and product sense required at this career stage.
+
+## 📋 Table of Contents
+
+- [Interview Process Overview](#-interview-process-overview)
+- [Technical Question Bank](#-technical-question-bank)
+- [Study Resources](#-study-resources)
+- [Project Ideas](#-project-ideas)
+- [Contribution Guidelines](#-contribution-guidelines)
+
+---
+
+## 🏆 Interview Process Overview
+
+The typical interview loop at top product-based companies (FAANG, etc.) consists of several stages:
+
+1.  **Recruiter Screen:** A brief call discussing your resume, experience, and high-level fit.
+2.  **Technical Phone Screen (1-2 rounds):** A focused coding and algorithms assessment, often conducted on platforms like CoderPad or HackerRank.
+3.  **Virtual On-Site / Final Loop (4-5 rounds):** A comprehensive set of interviews covering:
+    -   **Coding & Algorithms:** Deep-dive into problem-solving.
+    -   **Machine Learning & Statistics:** Theoretical and applied knowledge.
+    -   **System Design (ML):** Designing scalable ML systems.
+    -   **Behavioral & Product Sense:** Past experiences and business impact.
+
+## 💻 Technical Question Bank
+
+### 1. Machine Learning Fundamentals
+
+**Theory & Concepts**
+- Explain the bias-variance tradeoff. How does it relate to overfitting and underfitting?
+- What is regularization (L1/L2)? Explain the differences and when you would use each.
+- Describe how cross-validation works. Why is it important?
+- How would you handle an imbalanced dataset?
+- Walk me through the steps of a standard machine learning project.
+
+**Model Evaluation**
+- What is the difference between precision and recall? Which metric would you optimize for in a fraud detection model and why?
+- Explain ROC-AUC curve. What does an AUC of 0.5 mean? What about 1.0?
+- How would you evaluate a regression model beyond just R²?
+
+**Feature Engineering**
+- What feature engineering techniques have you used in your projects? (e.g., one-hot encoding, feature scaling, handling missing values, creating interaction terms).
+- What is the curse of dimensionality? How does it impact model performance?
+
+### 2. Deep Learning
+
+**Neural Network Basics**
+- Explain the concept of backpropagation. What is the role of the activation function?
+- Why is ReLU a popular activation function? What are its potential problems (e.g., dying ReLU) and solutions?
+- What are the common weight initialization techniques (e.g., He, Xavier)?
+
+**Architectures**
+- Explain the core components of a Convolutional Neural Network (CNN) and why they are effective for image data.
+- Compare and contrast RNNs (or LSTMs/GRUs) with Transformers. What are the advantages of Transformers for sequential data?
+- Describe the attention mechanism in your own words.
+
+### 3. Programming & Algorithms
+
+**Python**
+- *Coding:* Reverse a linked list, implement a binary search, check for a palindrome.
+- *Libraries:* Demonstrate a simple data preprocessing pipeline using Pandas and Scikit-learn.
+- *OOP:* Explain inheritance and polymorphism with an example.
+
+**SQL**
+- Write a query to find the second-highest salary from an `Employees` table.
+- Use a window function (e.g., `ROW_NUMBER()`, `RANK()`) to find the top-selling product in each category.
+- Explain the differences between `INNER JOIN`, `LEFT JOIN`, and a subquery.
+
+### 4. ML System Design & MLOps
+
+**System Design**
+- How would you design a recommendation system for an e-commerce site like Amazon?
+- Design a system to detect toxic comments on a social media platform in real-time. Consider scalability and latency.
+- How would you handle a scenario where your model's performance degrades in production (model drift)?
+
+**MLOps Concepts**
+- What is the difference between batch inference and real-time inference? What are the trade-offs?
+- What are the key components of an ML pipeline (e.g., feature stores, model registries, monitoring)?
+- How would you version your models and data?
+
+## 📚 Study Resources
+
+### Practice Platforms
+- **LeetCode:** For algorithm and SQL practice. (Focus on Medium level).
+- **DataLemur:** SQL interview questions from top companies.
+- **Kaggle:** For hands-on practice with datasets and notebooks.
+
+### Theory & Concepts
+- **Book:** ["Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/) by Aurélien Géron.
+- **Course:** [Machine Learning Engineering for Production (MLOps)](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops) by DeepLearning.AI.
+
+### Mock Interviews
+- **Pramp:** Free peer-to-peer mock interviews.
+- **Interviewing.io:** Practice with anonymous engineers from top companies.
+
+## 🚀 Project Ideas
+
+Build or refine projects that demonstrate end-to-end ML prowess:
+- **End-to-End ML Pipeline:** Scrape data, build a model, deploy it as a REST API (e.g., using FastAPI), and containerize it with Docker.
+- **Fine-tuning a Transformer:** Fine-tune a BERT or GPT model on a specific domain task (e.g., sentiment analysis on financial news).
+- **Computer Vision Project:** Build an object detection model using a framework like YOLO or Detectron2.
+
+## 🤝 Contribution Guidelines
+
+Contributions are welcome! If you have additional questions, better explanations, or new resources, please feel free to contribute.
+
+1.  Fork the repo.
+2.  Create a feature branch (`git checkout -b feature/amazing-question`).
+3.  Commit your changes (`git commit -m 'Add some amazing questions'`).
+4.  Push to the branch (`git push origin feature/amazing-question`).
+5.  Open a Pull Request.
+
+---
+
+**Good luck with your preparation!** If this guide helped you, please give it a ⭐.
