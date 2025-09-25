@@ -1,0 +1,117 @@
+Of course! Here are the top 10 scenario-based questions for Prompt Engineering and LLMs, formatted for a GitHub repository README. This structure is clear, uses bullet points for easy scanning, and includes practical examples.
+
+---
+
+# Top 10 Scenario-Based Prompt Engineering & LLM Questions
+
+A curated list of practical, scenario-based interview questions to test knowledge of Large Language Models (LLMs) and Prompt Engineering. These questions are designed for roles like AI Engineer, Prompt Engineer, or ML Engineer, focusing on problem-solving beyond theoretical knowledge.
+
+## 🤔 Why Scenario-Based Questions?
+These questions assess your ability to:
+*   **Apply** prompt engineering techniques to real-world problems.
+*   **Think critically** about LLM capabilities and limitations.
+*   **Design** robust systems that include LLMs.
+*   **Troubleshoot** common issues like ambiguity, bias, and unreliable output.
+
+---
+
+## ❓ Top 10 Questions & Key Assessment Points
+
+### 1. The Unreliable Summarizer
+**Scenario:** You built a feature that uses an LLM to summarize long customer reviews into a short paragraph. However, you notice the model sometimes "hallucinates" details not present in the original review, leading to customer complaints.
+
+*   **What would you do?**
+    *   **Discuss Techniques:** Few-shot prompting (provide examples of good/bad summaries), instruction tuning (explicitly say "Do not add any information not present in the text"), and controlling creativity via parameters like `temperature=0`.
+    *   **Mention Evaluation:** How would you quantitatively measure the improvement (e.g., using ROUGE scores against human-written summaries)?
+    *   **Consider Alternatives:** Is summarization the right task? Would sentiment analysis or keyphrase extraction be more reliable?
+
+### 2. The Biased Recruiter
+**Scenario:** You are tasked with using an LLM to screen software engineer resumes and extract key skills. During testing, you find the model unfairly downgrades resumes from applicants who graduated from certain universities or have non-traditional backgrounds.
+
+*   **How would you address this?**
+    *   **Immediate Mitigation:** Use prompt guidance (e.g., "Base your assessment solely on the skills and experience listed. Ignore university names and other demographic information.").
+    *   **Systemic Solutions:** Discuss the importance of curating a bias-free evaluation dataset and performing rigorous bias testing before deployment.
+    *   **Architecture Choice:** Question if an LLM is the right tool for the initial screening vs. a simpler, rule-based skill-matching system.
+
+### 3. The Conversational Breakdown
+**Scenario:** A customer service chatbot you designed works well for the first few interactions but often loses context in long conversations, asking users to repeat information they already provided.
+
+*   **What are your strategies to fix this?**
+    *   **Technical Approach:** Explain the concept of a "context window" and techniques to manage it, such as summarizing past conversations or using vector databases for long-term memory.
+    *   **Prompt Engineering:** Structure the prompt to include a "Conversation History" section that is updated throughout the chat.
+    *   **UI/UX Solution:** Could the user interface be designed to show the bot's understanding of the context, allowing the user to correct it easily?
+
+### 4. The Refusal Problem
+**Scenario:** You've fine-tuned an LLM to be a helpful, harmless, and honest assistant for a legal research tool. However, it now refuses to answer straightforward questions about basic legal concepts, responding with, "I cannot provide legal advice."
+
+*   **How do you make it more helpful without compromising safety?**
+    *   **Prompt Calibration:** Refine the system prompt to distinguish between providing general public information (which is okay) and giving personalized legal advice (which is not).
+    *   **Fine-Tuning Data:** Analyze the fine-tuning dataset to see if it contains too many examples of refusals for benign questions.
+    *   **Role-Playing:** Frame the prompt to put the LLM in a specific, safe role (e.g., "You are a law librarian providing publicly available information...").
+
+### 5. The Structured Data Challenge
+**Scenario:** You need to extract specific pieces of information (e.g., `product_name`, `price`, `warranty_period`) from thousands of unstructured product description emails and output it in a consistent JSON format. The initial prompts are inconsistent.
+
+*   **What prompt engineering techniques would you use?**
+    *   **Demonstrate:** Use few-shot prompting by providing 2-3 examples of input text and the exact JSON output you expect.
+    *   **Explicit Instructions:** Specify the JSON schema in the prompt (e.g., "Output a JSON object with the following keys: ...").
+    *   **Tooling:** Mention the use of function-calling or tools like OpenAI's JSON mode to constrain the output format.
+
+### 6. The Creative Brief
+**Scenario:** Your marketing team finds that prompts like "Write a tweet about our new coffee blend" produce generic, low-quality content. They need more creative and on-brand output.
+
+*   **How would you guide them to write better prompts?**
+    *   **Framework Introduction:** Teach them a framework like **Role-Audience-Format-Task (RAFT)**.
+        *   **Role:** You are a witty and sophisticated barista.
+        *   **Audience:** Coffee enthusiasts on Twitter.
+        *   **Format:** A single, engaging tweet with 2-3 relevant hashtags.
+        *   **Task:** Highlight the coffee's unique Ethiopian origin and chocolate notes.
+    *   **Iterative Process:** Emphasize that prompt engineering is iterative. They should generate multiple variants and select the best.
+
+### 7. The Cost & Latency Optimizer
+**Scenario:** Your application uses a powerful, expensive LLM (like GPT-4) for all tasks, but for simple tasks like grammar correction, this is causing high costs and slower response times.
+
+*   **How would you optimize this system?**
+    *   **Task-Specific Models:** Propose a model routing system. Use a smaller, faster, cheaper model (like GPT-3.5 Turbo or an open-source model) for simple tasks and reserve the powerful model for complex reasoning.
+    *   **Caching:** Implement a caching layer for frequent, identical queries.
+    *   **Prompt Design:** Ensure prompts are efficient and don't contain unnecessary context for simple tasks.
+
+### 8. The Code Generator's Blind Spot
+**Scenario:** A code-generation assistant produces functionally correct code but consistently uses insecure practices (e.g., SQL injection vulnerabilities).
+
+*   **How do you prompt the model to generate more secure code?**
+    *   **Specificity in Prompt:** Add explicit security constraints to the prompt (e.g., "Write a Python function to query a database. Use parameterized queries to prevent SQL injection.").
+    *   **Few-Shot Learning:** Provide examples of secure vs. insecure code in the prompt.
+    *   **Post-Processing:** Suggest using linters or security scanners as a mandatory step after code generation, not relying solely on the LLM.
+
+### 9. The Multilingual Query Handler
+**Scenario:** Your QA system, designed for an English-language knowledge base, is now receiving a significant number of questions in Spanish. It currently fails or provides poor answers.
+
+*   **What is your approach to make it multilingual?**
+    *   **Prompt-Based Solution:** Instruct the model in the system prompt: "If the user's question is in a language other than English, first translate it to English, find the answer, then translate the answer back to the user's original language."
+    *   **Evaluation:** How would you test the quality of the translations and the final answers in Spanish?
+    *   **Data Consideration:** Discuss whether fine-tuning on a multilingual dataset would be a better long-term solution.
+
+### 10. The Fact-Checking Assistant
+**Scenario:** You are building a research assistant that uses an LLM. The model sometimes provides plausible-sounding but incorrect or outdated factual information.
+
+*   **How do you design the system to improve accuracy?**
+    *   **Retrieval-Augmented Generation (RAG):** This is the key concept. Explain how you would connect the LLM to a search engine or a vector database containing verified, up-to-date sources. The prompt would instruct the model to "base your answer solely on the provided context below."
+    *   **Cite Sources:** Design the output to include citations, so users can verify the information.
+    *   **Model Awareness:** Instruct the model to say "I don't know" if the provided context doesn't contain enough information, rather than guessing.
+
+---
+
+## 💡 How to Use This List
+
+1.  **Self-Study:** Think through each scenario and outline your answer.
+2.  **Mock Interviews:** Practice explaining your solutions aloud with a friend or colleague.
+3.  **Deep Dives:** Pick one question and design a full technical specification for the system.
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork this repo and add new scenarios, improve existing answers, or suggest more resources.
+
+---
+
+**Good luck with your interview preparation!** If this resource was helpful, please give it a ⭐.
